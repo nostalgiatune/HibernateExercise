@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://mysql.metropolia.fi:3306/tuomavt?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">tuomavt</property>
+    <property name="hibernate.connection.password">kannettava</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.hbm2ddl.auto">create-drop</property>
+    
+    <mapping class="com.tuoppi.pysakointi.model.Ajoneuvo" />
+    <mapping class="com.tuoppi.pysakointi.model.Haltija" />
+    <mapping class="com.tuoppi.pysakointi.model.Tyontekija" />
+    <mapping class="com.tuoppi.pysakointi.model.Sakko" />
+    
+  </session-factory>
+</hibernate-configuration>
